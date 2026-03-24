@@ -1,35 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './components/Home';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import '../node_modules/bootstrap/dist/js/bootstrap.min.js'
+import ProductShow from './components/ProductShow.jsx';
+import Allproducts from './components/Allproducts.jsx';
+import Cratsman from './components/Cratsman.jsx';
+import Testimonials from './components/Testimonials.jsx';
+import Trust from './components/Trust.jsx';
+import Footer from "./components/Footer.jsx";
+import Rings from './components/Rings.jsx';
+import Necklace from './components/Necklace.jsx';
+import Bracelets from './components/Bracelets.jsx';
+import Bangles from './components/Bangles.jsx';
+import Earrings from './components/Earrings.jsx';
+import Book from './components/Book.jsx';
+import Contact from './components/Contact.jsx';
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        {/* Home Page */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Home />
+              <ProductShow />
+              <Cratsman />
+              <Testimonials />
+              <Trust />
+              <Footer />
+            </>
+          }
+        />
+
+        {/* Products Page */}
+        <Route path="/allproducts" element={<Allproducts />} />
+        <Route path="/rings" element={<Rings />} />
+        <Route path="/necklaces" element={<Necklace />} />
+        <Route path="/earrings" element={<Earrings />} />
+        <Route path="/bangles" element={<Bangles />} />
+        <Route path="/bracelets" element={<Bracelets />} />
+        <Route path="/book-consultation" element={<Book />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

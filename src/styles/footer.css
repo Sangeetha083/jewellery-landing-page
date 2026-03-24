@@ -1,0 +1,18 @@
+.footer-link {
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+.social-icon {
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    color: gold !important;
+}

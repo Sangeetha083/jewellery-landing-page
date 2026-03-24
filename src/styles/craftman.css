@@ -1,0 +1,199 @@
+.craftsmanship-section {
+    padding: 2rem 1.5rem;
+    background: linear-gradient(to bottom, #f9fafb, white);
+}
+
+.craftsmanship-container {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.craftsmanship-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+.craftsmanship-text {
+    order: 2;
+}
+
+@media (max-width: 1024px) {
+    .craftsmanship-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .craftsmanship-text {
+        order: 1;
+    }
+
+    .craftsmanship-image {
+        order: 2;
+    }
+}
+
+.craftsmanship-label {
+    color: #b45309;
+    font-size: 0.875rem;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.craftsmanship-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 300;
+    color: #111827;
+    margin-bottom: 1.5rem;
+}
+
+.craftsmanship-title-italic {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.craftsmanship-paragraph {
+    color: #374151;
+    font-size: 1.125rem;
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+}
+
+.craftsmanship-button {
+    color: #111827;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.craftsmanship-button:hover {
+    color: #b45309;
+}
+
+.craftsmanship-button-arrow {
+    display: inline-block;
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.craftsmanship-button:hover .craftsmanship-button-arrow {
+    transform: translateX(0.5rem);
+}
+
+.craftsmanship-image {
+    order: 1;
+    position: relative;
+}
+
+.craftsmanship-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.craftsmanship-image-img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.craftsmanship-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+}
+
+.craftsmanship-stat-box {
+    position: absolute;
+    bottom: -2rem;
+    left: -2rem;
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    max-width: 16rem;
+}
+
+.craftsmanship-stat-number {
+    font-size: 3rem;
+    font-weight: 300;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.craftsmanship-stat-text {
+    color: #4b5563;
+    letter-spacing: 0.05em;
+}
+
+.craftsmanship-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    text-align: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+}
+
+.feature-icon {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b45309;
+    border: 2px solid #b45309;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    transition: all 0.5s ease;
+}
+
+.feature-card:hover .feature-icon {
+    background-color: #b45309;
+    color: white;
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #111827;
+    margin-bottom: 0.75rem;
+}
+
+.feature-description {
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .craftsmanship-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .craftsmanship-grid {
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .craftsmanship-image-img {
+        height: 400px;
+    }
+
+    .craftsmanship-stat-box {
+        position: static;
+        margin-top: 1rem;
+    }
+}

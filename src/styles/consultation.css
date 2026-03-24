@@ -1,0 +1,60 @@
+.consultation-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.consultation-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.consultation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.consultation-form input,
+.consultation-form select,
+.consultation-form textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.consultation-form button {
+    padding: 12px;
+    background: #111827;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.consultation-form button:hover {
+    background: #c19b2e;
+}
+
+/* success message */
+
+.contact-success {
+    background: #d1fae5;
+    color: #065f46;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 500;
+}
+.back-link {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.back-link:hover {
+    color: #c59d5f;
+    transform: translateX(-3px);
+}

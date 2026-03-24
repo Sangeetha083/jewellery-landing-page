@@ -1,0 +1,122 @@
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 40px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.image-wrapper {
+    position: relative;
+}
+
+.products-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: crimson;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    height: 45px;
+    overflow: hidden;
+}
+
+.price-section {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.discounted-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #c19b2e;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: gray;
+    font-size: 14px;
+}
+
+.rating {
+    margin: 8px 0;
+    font-size: 14px;
+}
+.fastar{
+    color: #fbbf24;
+    margin-right: 5px;
+}
+.view-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background: #111827;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: #c19b2e;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.back-link {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.back-link:hover {
+    color: #c59d5f;
+    transform: translateX(-3px);
+}
