@@ -1,0 +1,344 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 10, 10, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 1rem;
+    animation: fadeIn 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Modal Content */
+.modal-content {
+    background: #1a1a1a;
+    border: 2px solid #D4AF37;
+    max-width: 1100px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 25px 50px rgba(212, 175, 55, 0.3);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Close Button */
+.modal-close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(212, 175, 55, 0.2);
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.25rem;
+    z-index: 10;
+}
+
+.modal-close-btn:hover {
+    background: #D4AF37;
+    color: #0a0a0a;
+    transform: rotate(90deg);
+}
+
+/* Grid Layout */
+.modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+/* Image Section */
+.modal-image-section {
+    position: relative;
+    background: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-right: 2px solid #2a2a2a;
+}
+
+.modal-product-image {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    border: 1px solid #2a2a2a;
+}
+
+.modal-discount-badge {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background: linear-gradient(135deg, #D4AF37 0%, #F4E5C3 100%);
+    color: #0a0a0a;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.5);
+}
+
+/* Details Section */
+.modal-details-section {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.modal-category-badge {
+    display: inline-block;
+    background: rgba(212, 175, 55, 0.1);
+    color: #D4AF37;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border: 1px solid #D4AF37;
+    width: fit-content;
+}
+
+.modal-product-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f5f5f0;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.modal-price-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid #2a2a2a;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.modal-discounted-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #D4AF37;
+}
+
+.modal-original-price {
+    font-size: 1.25rem;
+    color: #6b7280;
+    text-decoration: line-through;
+}
+
+.modal-description {
+    color: #c5c5c0;
+    font-size: 1rem;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* Benefits Section */
+.modal-benefits {
+    background: rgba(212, 175, 55, 0.05);
+    padding: 1.5rem;
+    border: 1px solid #2a2a2a;
+}
+
+.modal-benefits-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #D4AF37;
+    margin-bottom: 1rem;
+}
+
+.modal-benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.modal-benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #f5f5f0;
+    font-size: 0.875rem;
+}
+
+.modal-benefit-icon {
+    color: #D4AF37;
+    font-size: 1.25rem;
+}
+
+.modal-benefit-text {
+    font-weight: 500;
+}
+
+/* Pricing Note */
+.modal-pricing-note {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(244, 229, 195, 0.05) 100%);
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #D4AF37;
+}
+
+.modal-pricing-note p {
+    color: #f5f5f0;
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Contact Buttons */
+.modal-contact-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.modal-whatsapp-btn,
+.modal-email-btn {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.modal-whatsapp-btn {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+}
+
+.modal-whatsapp-btn:hover {
+    background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+}
+
+.modal-email-btn {
+    background: linear-gradient(135deg, #D4AF37 0%, #F4E5C3 100%);
+    color: #0a0a0a;
+}
+
+.modal-email-btn:hover {
+    background: linear-gradient(135deg, #F4E5C3 0%, #D4AF37 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* Scrollbar Styling */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #D4AF37;
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #F4E5C3;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .modal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-image-section {
+        border-right: none;
+        border-bottom: 2px solid #2a2a2a;
+        min-height: 400px;
+    }
+
+    .modal-details-section {
+        padding: 2rem;
+    }
+
+    .modal-product-title {
+        font-size: 1.5rem;
+    }
+
+    .modal-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-overlay {
+        padding: 0.5rem;
+    }
+
+    .modal-details-section {
+        padding: 1.5rem;
+    }
+
+    .modal-contact-buttons {
+        flex-direction: column;
+    }
+
+    .modal-discounted-price {
+        font-size: 1.5rem;
+    }
+
+    .modal-original-price {
+        font-size: 1rem;
+    }
+
+    .modal-close-btn {
+        top: 1rem;
+        right: 1rem;
+        width: 35px;
+        height: 35px;
+    }
+}

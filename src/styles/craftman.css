@@ -1,199 +1,213 @@
 .craftsmanship-section {
-    padding: 2rem 1.5rem;
-    background: linear-gradient(to bottom, #f9fafb, white);
+    background: #0a0a0a;
+    padding: 6rem 1.5rem;
+    border-top: 1px solid #2a2a2a;
 }
 
 .craftsmanship-container {
     max-width: 80rem;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .craftsmanship-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
-    align-items: center;
     margin-bottom: 6rem;
+    align-items: center;
 }
 
 .craftsmanship-text {
-    order: 2;
-}
-
-@media (max-width: 1024px) {
-    .craftsmanship-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .craftsmanship-text {
-        order: 1;
-    }
-
-    .craftsmanship-image {
-        order: 2;
-    }
+    padding-right: 2rem;
 }
 
 .craftsmanship-label {
-    color: #b45309;
+    color: #D4AF37;
     font-size: 0.875rem;
-    letter-spacing: 0.075em;
+    font-weight: 600;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    display: block;
 }
 
 .craftsmanship-title {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 300;
-    color: #111827;
-    margin-bottom: 1.5rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 700;
+    color: #f5f5f0;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
 }
 
 .craftsmanship-title-italic {
-    font-family: Georgia, serif;
     font-style: italic;
-    font-weight: 400;
+    color: #D4AF37;
+    display: block;
 }
 
 .craftsmanship-paragraph {
-    color: #374151;
+    color: #c5c5c0;
     font-size: 1.125rem;
-    line-height: 1.75;
+    line-height: 1.8;
     margin-bottom: 1.5rem;
-}
-
-.craftsmanship-button {
-    color: #111827;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.craftsmanship-button:hover {
-    color: #b45309;
-}
-
-.craftsmanship-button-arrow {
-    display: inline-block;
-    margin-left: 0.5rem;
-    transition: transform 0.3s ease;
-}
-
-.craftsmanship-button:hover .craftsmanship-button-arrow {
-    transform: translateX(0.5rem);
+    font-weight: 300;
 }
 
 .craftsmanship-image {
-    order: 1;
     position: relative;
 }
 
 .craftsmanship-image-wrapper {
     position: relative;
+    border: 3px solid #D4AF37;
     overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .craftsmanship-image-img {
     width: 100%;
-    height: 480px;
+    height: 100%;
     object-fit: cover;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.craftsmanship-image-wrapper:hover .craftsmanship-image-img {
+    transform: scale(1.05);
 }
 
 .craftsmanship-image-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+    background: linear-gradient(to bottom,
+            transparent 0%,
+            rgba(10, 10, 10, 0.4) 100%);
 }
 
 .craftsmanship-stat-box {
     position: absolute;
     bottom: -2rem;
-    left: -2rem;
-    background-color: white;
+    right: -2rem;
+    background: linear-gradient(135deg, #D4AF37 0%, #F4E5C3 100%);
     padding: 2rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    max-width: 16rem;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+    border: 3px solid #0a0a0a;
+    min-width: 200px;
 }
 
 .craftsmanship-stat-number {
+    font-family: 'Playfair Display', Georgia, serif;
     font-size: 3rem;
-    font-weight: 300;
-    color: #111827;
+    font-weight: 700;
+    color: #0a0a0a;
     margin-bottom: 0.5rem;
+    line-height: 1;
 }
 
 .craftsmanship-stat-text {
-    color: #4b5563;
+    color: #0a0a0a;
+    font-size: 0.875rem;
+    font-weight: 700;
     letter-spacing: 0.05em;
+    text-transform: uppercase;
+    line-height: 1.4;
 }
 
 .craftsmanship-features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 2.5rem;
 }
 
 .feature-card {
+    background: #1a1a1a;
+    padding: 2.5rem;
     text-align: center;
-    transition: all 0.5s ease;
-    cursor: pointer;
+    border: 1px solid #2a2a2a;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.feature-card:hover::before {
+    transform: scaleX(1);
 }
 
 .feature-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-8px);
+    border-color: #D4AF37;
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+    background: #1f1f1f;
 }
 
 .feature-icon {
-    width: 4rem;
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #b45309;
-    border: 2px solid #b45309;
-    border-radius: 50%;
-    margin: 0 auto 1.5rem;
-    transition: all 0.5s ease;
+    color: #D4AF37;
+    margin-bottom: 1.5rem;
+    display: inline-flex;
+    transition: transform 0.4s ease;
 }
 
 .feature-card:hover .feature-icon {
-    background-color: #b45309;
-    color: white;
+    transform: scale(1.1) rotate(5deg);
 }
 
 .feature-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #f5f5f0;
     font-size: 1.25rem;
-    font-weight: 300;
-    color: #111827;
-    margin-bottom: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
 .feature-description {
-    color: #4b5563;
-    line-height: 1.6;
+    color: #c5c5c0;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+    .craftsmanship-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .craftsmanship-text {
+        padding-right: 0;
+    }
+
+    .craftsmanship-stat-box {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        margin-top: 2rem;
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
     .craftsmanship-section {
-        padding: 4rem 1.5rem;
+        padding: 4rem 1rem;
     }
 
-    .craftsmanship-grid {
+    .craftsmanship-features {
+        grid-template-columns: 1fr;
         gap: 1.5rem;
-        margin-bottom: 3rem;
-    }
-
-    .craftsmanship-image-img {
-        height: 400px;
-    }
-
-    .craftsmanship-stat-box {
-        position: static;
-        margin-top: 1rem;
     }
 }

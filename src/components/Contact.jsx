@@ -43,7 +43,7 @@ function Contact() {
   };
 
   return (
-    <div>
+    <div className="fdiv">
       <div className="contact-container">
         <Link to="/" className="text-decoration-none back-link">
                     <div className="fs-5">&larr; Back</div>

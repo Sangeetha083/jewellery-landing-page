@@ -10,8 +10,8 @@ function Home() {
           className="hero-background"
           style={{
             backgroundImage:
-              "url(https://images.pexels.com/photos/1927259/pexels-photo-1927259.jpeg?auto=compress&cs=tinysrgb&w=1920)",
-            filter: "brightness(0.7) contrast(1.1)",
+              "url(https://www.vummidi.com/blog/wp-content/uploads/2024/08/Divine-Temple-Jewellery-Set.jpg)",
+            filter: "brightness(1.5) contrast(1.1)",
           }}
         ></div>
         {/* overlay */}

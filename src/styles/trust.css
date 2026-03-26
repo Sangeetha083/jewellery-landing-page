@@ -1,11 +1,13 @@
 .trust-section {
-    padding: 3rem 1.5rem;
-    background: linear-gradient(to bottom, white, #f9fafb);
+    background: #0a0a0a;
+    padding: 6rem 1.5rem;
+    border-top: 1px solid #2a2a2a;
 }
 
 .trust-container {
     max-width: 80rem;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .trust-header {
@@ -14,64 +16,64 @@
 }
 
 .trust-label {
-    color: #b45309;
+    color: #D4AF37;
     font-size: 0.875rem;
-    letter-spacing: 0.075em;
+    font-weight: 600;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    margin-bottom: 0.75rem;
-}
-
-.trust-title {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 300;
-    color: #111827;
     margin-bottom: 1rem;
 }
 
+.trust-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: #f5f5f0;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
 .trust-description {
-    color: #4b5563;
+    color: #c5c5c0;
     font-size: 1.125rem;
     max-width: 42rem;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.75;
+    font-weight: 300;
 }
 
 .trust-indicators-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 2rem;
     margin-bottom: 5rem;
 }
 
 .indicator-card {
+    background: #1a1a1a;
+    padding: 2rem;
+    border: 1px solid #2a2a2a;
     display: flex;
-    gap: 1rem;
-    padding: 1.5rem;
-    background-color: white;
-    transition: all 0.5s ease;
-    cursor: pointer;
+    gap: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .indicator-card:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    transform: translateY(-0.25rem);
+    transform: translateY(-5px);
+    border-color: #D4AF37;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+    background: #1f1f1f;
 }
 
 .indicator-icon {
+    color: #D4AF37;
     flex-shrink: 0;
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #b45309;
-    border: 1px solid #b45309;
-    transition: all 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 .indicator-card:hover .indicator-icon {
-    background-color: #b45309;
-    color: white;
+    transform: scale(1.1);
 }
 
 .indicator-content {
@@ -79,115 +81,120 @@
 }
 
 .indicator-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #f5f5f0;
     font-size: 1.125rem;
-    font-weight: 500;
-    color: #111827;
+    font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
 .indicator-description {
-    color: #4b5563;
-    line-height: 1.6;
+    color: #c5c5c0;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    font-weight: 300;
+    margin: 0;
 }
 
 .cta-section {
-    background-color: #111827;
-    color: white;
-    padding: 5rem 4rem;
     position: relative;
+    padding: 5rem 2rem;
+    text-align: center;
     overflow: hidden;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    border: 2px solid #D4AF37;
+    box-shadow: 0 15px 50px rgba(212, 175, 55, 0.2);
 }
 
 .cta-background {
     position: absolute;
     inset: 0;
+    background-image: url('https://images.pexels.com/photos/248077/pexels-photo-248077.jpeg?auto=compress&cs=tinysrgb&w=1920');
     background-size: cover;
     background-position: center;
-    opacity: 0.1;
+    opacity: 0.05;
 }
 
 .cta-content {
     position: relative;
     z-index: 10;
-    max-width: 56rem;
+    max-width: 48rem;
     margin: 0 auto;
-    text-align: center;
 }
 
 .cta-title {
-    font-size: clamp(1.875rem, 4vw, 2.25rem);
-    font-weight: 300;
-    margin-bottom: 2.5rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: #f5f5f0;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
 }
 
 .cta-description {
-    color: #d1d5db;
+    color: #c5c5c0;
     font-size: 1.125rem;
-    margin-bottom: 2rem;
-    line-height: 2;
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
 }
 
 .cta-buttons {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
     justify-content: center;
-}
-
-@media (min-width: 640px) {
-    .cta-buttons {
-        flex-direction: row;
-    }
+    flex-wrap: wrap;
 }
 
 .cta-button {
-    padding: 1rem 2.5rem;
+    padding: 1.25rem 2.5rem;
     font-size: 0.875rem;
-    letter-spacing: 0.125em;
+    font-weight: 700;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    border: none;
+    border: 2px solid #D4AF37;
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cta-button-primary {
-    background-color: white;
-    color: #111827;
+    background: linear-gradient(135deg, #D4AF37 0%, #F4E5C3 100%);
+    color: #0a0a0a;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
 }
 
 .cta-button-primary:hover {
-    background-color: #fbbf24;
-    transform: scale(1.05);
+    background: linear-gradient(135deg, #F4E5C3 0%, #D4AF37 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.6);
 }
 
 .cta-button-secondary {
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
+    background: transparent;
+    color: #D4AF37;
 }
 
 .cta-button-secondary:hover {
-    background-color: white;
-    color: #111827;
-    transform: scale(1.05);
+    background: rgba(212, 175, 55, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
 }
 
 @media (max-width: 768px) {
     .trust-section {
-        padding: 4rem 1.5rem;
+        padding: 4rem 1rem;
     }
 
     .trust-indicators-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
-        margin-bottom: 3rem;
     }
 
     .cta-section {
-        padding: 2rem 1.5rem;
+        padding: 3rem 1.5rem;
     }
 
     .cta-buttons {
         flex-direction: column;
+        align-items: stretch;
     }
 }

@@ -64,7 +64,7 @@ function Book() {
   };
 
   return (
-    <div>
+    <div className="fdiv">
       <div className="consultation-container">
         <Link to="/" className="text-decoration-none back-link">
                     <div className="fs-5">&larr; Back</div>
